@@ -1,0 +1,11 @@
+# Secrets — never commit
+.env
+
+# Runtime volume data
+media/
+certs/
+
+# Keep the placeholder files for empty dirs
+!media/.gitkeep
+!certs/.gitkeep
+!custom-templates/.gitkeep
