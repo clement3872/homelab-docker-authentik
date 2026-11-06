@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Generates a ready-to-use .env from .env.example
 # Run once before first `docker compose up`
-
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -13,8 +12,8 @@ if [[ -f "$ENV_FILE" ]]; then
   exit 1
 fi
 
-PG_PASS=$(openssl rand -base64 36)
-SECRET_KEY=$(openssl rand -base64 60)
+PG_PASS=$(openssl rand -base64 36 | tr -d '\n')
+SECRET_KEY=$(openssl rand -base64 60 | tr -d '\n')
 
 sed \
   -e "s|^PG_PASS=.*|PG_PASS=$PG_PASS|" \

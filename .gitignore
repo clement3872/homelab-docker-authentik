@@ -2,6 +2,7 @@
 .env
 
 # Runtime volume data
+data/
 media/
 certs/
 

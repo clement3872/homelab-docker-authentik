@@ -10,8 +10,6 @@ authentik/
 ├── docker-compose.yml       — PostgreSQL + Redis + server + worker
 ├── .env.example             — all config vars documented
 ├── generate-secrets.sh      — auto-generates .env with fresh secrets
-├── caddy/
-│   └── authentik.caddy      — Caddyfile snippet (import into your main one)
 ├── media/                   — mounted volume for uploads/avatars
 ├── certs/                   — mounted volume for managed certs
 └── custom-templates/        — override Authentik UI templates if needed
